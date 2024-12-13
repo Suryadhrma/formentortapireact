@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+
+/* DashboardContent.css */
+/*.dashboard-content {
+    padding: 20px;
+    font-family: Montserrat;
+    color: #000000;
+  } */
+  
+/* DashboardContent.css */
+
+/* Dashboard Content */
+.dashboard-content {
+    padding: 20px;
+    font-family: Montserrat;
+    color: #000000;
+  }
+  
+  /* Dashboard Header - Horizontal Layout */
+  .dashboard-header {
+    position: absolute;
+    top: 80px;
+    display: flex; /* Flexbox untuk horizontal layout */
+    align-items: center; /* Vertikal rata tengah */
+    justify-content: space-between; /* My Activity di kiri, tab di kanan */
+    margin-bottom: 20px;
+    padding: 0 10px; /* Tambahkan padding untuk jarak */
+  }
+  
+  /* My Activity */
+  .dashboard-header h2 {
+    font-size: 24px;
+    margin: 0; /* Hilangkan margin default */
+  }
+  
+  /* Tabs Container */
+  .tabs {
+    position: absolute;
+    top: 40px;
+    width: 50px;
+    height: auto;
+    left: 1050px;
+    display: flex; /* Tabs horizontal */
+    gap: 10px; /* Jarak antar tombol tab */
+    color: #000000;
+    
+  }
+  
+  .tabs button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    background-color: #DCDBDB;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tabs button.active {
+    background-color: #27DEBF80;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .tabs button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Classes Container */
+  .classes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+  }
+  
+  /* Class Card */
+  .class-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Class Image */
+  .class-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  /* Title and Trainee Info */
+  h3 {
+    font-size: 18px;
+    margin: 12px 0;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Progress Bar */
+  .progress-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  progress {
+    width: 80%;
+    appearance: none;
+  }
+  
+  progress::-webkit-progress-bar {
+    background-color: #f3f3f3;
+    border-radius: 4px;
+  }
+  
+  progress::-webkit-progress-value {
+    background-color: #4caf50;
+    border-radius: 4px;
+  }
+  

@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+
+/* Atur margin dan padding seluruh halaman */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+
+/* Atur posisi logo di pojok kiri atas */
+.logo {
+    position: absolute;
+    top: 10px; /* Jarak dari atas */
+    left: 10px; /* Jarak dari kiri */
+}
+
+.logo img {
+    width: 120px; /* Ukuran logo */
+    height: auto; /* Menjaga proporsi logo */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Bayangan gambar */
+}
+
+.maskot{
+    position: absolute;
+    top: 150px; /* Jarak dari atas */
+    left: 250px; /* Jarak dari kiri */
+}
+
+.maskot img{
+    width: 350px; /* Ukuran logo */
+    height: auto; /* Menjaga proporsi logo */
+}
+
+.temform{
+
+    position: absolute;
+    top:20px; /* Jarak dari atas */
+    right: 150px; /* Jarak dari kiri */
+
+}
+
+.temform img{
+    width: 550px; /* Ukuran logo */
+    height: 600px; /* Menjaga proporsi logo */
+}
+
+.caption{
+    margin-top: 5px; /* Jarak antara gambar dan teks */
+    margin-left: 0px;
+    text-align: center; /* Teks rata tengah */
+    font-size: 26px; /* Ukuran teks */
+    color: #000000; /* Warna teks */
+    line-height: 0.5;
+}
+
+.text-overlay {
+    position: absolute; /* Posisi absolut terhadap container */
+    top: 12%; /* Posisikan di tengah secara vertikal */
+    left: 50%; /* Posisikan di tengah secara horizontal */
+    transform: translate(-50%, -50%); /* Pusatkan teks secara sempurna */
+    color: rgb(0, 0, 0); /* Warna teks */
+    font-size: 30px; /* Ukuran teks */
+    font-family: 'Montserrat'; /* Jenis font */
+    font-weight: bold; /* Tebal teks */
+    text-align: center; /* Teks rata tengah */
+    white-space: nowrap; /* Mencegah teks berpindah ke baris baru */
+    padding: 10px; /* Jarak dalam teks */
+}
+
+/* Form overlay */
+.form-overlay {
+    position: absolute; /* Agar form muncul di atas gambar */
+    top: 55%; /* Posisi form di tengah secara vertikal */
+    left: 50%; /* Posisi form di tengah secara horizontal */
+    transform: translate(-50%, -50%); /* Pusatkan form */
+    padding: 20px; /* Jarak dalam form */
+    border-radius: 10px; /* Sudut membulat */
+    color: white; /* Warna teks */
+    text-align: center; /* Teks rata tengah */
+    width: 100%; /* Lebar form responsif */
+    max-width: 400px; /* Maksimal lebar form */
+    margin-top: 10px; /* Jarak antar elemen */
+    
+}
+
+.form-overlay input[type="file"]:focus + .custom-placeholder,
+.form-overlay input[type="file"]:hover + .custom-placeholder {
+    border-color: #3cb371;
+    color: #333; /* Placeholder text lebih gelap saat hover/focus */
+    }
+
+.form-overlay input[type="file"] {
+        display: none; /* Menyembunyikan elemen input */
+    }
+
+
+/* Input dan tombol di form */
+.form-overlay input,
+.form-overlay button {
+    width: 100%; /* Input dan tombol melebar penuh */
+    padding: 10px; /* Jarak dalam */
+    margin: 10px 0; /* Jarak antar elemen */
+    border: none; /* Hapus border */
+    margin-bottom: 20px; /* Jarak antar elemen */
+    font-size: 16px; /* Ukuran teks */
+    box-sizing: border-box; /* Sertakan padding & border ke dalam width */
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+}
+
+.form-overlay input {
+    background-color: #f9f9f9; /* Warna latar input */
+}
+
+.form-overlay button {
+    border-radius: 25px;
+    background-color: #ffffff; /* Warna tombol */
+    color: #339989; /* Warna teks tombol */
+    cursor: pointer; /* Ubah cursor saat hover */
+    font-weight: bold; /* Tebal teks tombol */
+    align-self: center;
+    transition: all 0.3s ease;
+}
+
+.form-overlay button:hover {
+    background-color: #a2d1ca; /* Warna saat tombol dihover */
+}
+
+.sociallogin {
+    position: absolute; /* Posisi absolut terhadap container */
+    top: 95%; /* Posisikan di tengah secara vertikal */
+    left: 50%; /* Posisikan di tengah secara horizontal */
+    transform: translate(-50%, -50%); /* Pusatkan teks secara sempurna */
+    color: rgb(0, 0, 0); /* Warna teks */
+    font-size: 10px; /* Ukuran teks */
+    font-family: 'Montserrat'; /* Jenis font */
+    text-align: center; /* Teks rata tengah */
+    white-space: nowrap; /* Mencegah teks berpindah ke baris baru */
+    padding: 10px; /* Jarak dalam teks */
+}
+
+/* Tombol gambar */
+.sosiaal{
+    position: absolute;
+    top: 3330px; /* Jarak dari atas */
+    left: 180px; /* Jarak dari kiri */
+}
+
+.sosiaal img {
+    width: 30px; /* Ukuran logo */
+    height: auto; /* Menjaga proporsi logo */
+    border-radius: 10px;
+}
+
+.guugel{
+    position: absolute;
+    top: 3330px; /* Jarak dari atas */
+    left: 230px; /* Jarak dari kiri */
+}
+
+.guugel img {
+    width: 30px; /* Ukuran logo */
+    height: auto; /* Menjaga proporsi logo */
+    border-radius: 10px;
+}
+
+.noakun {
+    position: absolute; /* Posisi absolut terhadap container */
+    top: 130%; /* Posisikan di tengah secara vertikal */
+    left: 43%; /* Posisikan di tengah secara horizontal */
+    transform: translate(-50%, -50%); /* Pusatkan teks secara sempurna */
+    color: rgb(0, 0, 0); /* Warna teks */
+    font-size: 13px; /* Ukuran teks */
+    font-family: 'Montserrat'; /* Jenis font */
+    text-align: center; /* Teks rata tengah */
+    white-space: nowrap; /* Mencegah teks berpindah ke baris baru */
+    padding: 10px; /* Jarak dalam teks */
+}
+
+.buatakun{
+    position: absolute; /* Posisi absolut terhadap container */
+    top: 130%; /* Posisikan di tengah secara vertikal */
+    left: 68%; /* Posisikan di tengah secara horizontal */
+    transform: translate(-50%, -50%); /* Pusatkan teks secara sempurna */
+    font-size: 13px; /* Ukuran teks */
+    font-family: 'Montserrat'; /* Jenis font */
+    text-align: center; /* Teks rata tengah */
+    white-space: nowrap; /* Mencegah teks berpindah ke baris baru */
+    padding: 10px; /* Jarak dalam teks */
+    color: #ffffff; /* Warna teks */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1.2rem; /* Added spacing */
+    top: 10%; /* Posisikan di tengah secara vertikal */
+    left: 50%; /* Posisikan di tengah secara horizontal */
+  }
+  
+  input {
+    width: 100%;
+    padding: 1rem; /* Increased padding for larger input fields */
+    border: 2px solid #e0e0e0; /* Adjusted border thickness */
+    border-radius: 10px; /* Rounded border for modern design */
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+    background-color: #f9f9f9;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #3cb371; /* Highlighted border when focused */
+  }
+  
+  .custom-placeholder {
+    display: block;
+    background-color: #f9f9f9;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: left;
+    font-size: 1rem;
+    color: #aaa;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+
+    input[type="file"]:focus + .custom-placeholder,
+    input[type="file"]:hover + .custom-placeholder {
+    border-color: #3cb371;
+    color: #333; /* Placeholder text lebih gelap saat hover/focus */
+    }
+
+    input[type="file"] {
+        display: none; /* Menyembunyikan elemen input */
+      }
+
+  button {
+    background-color: #3cb371;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px; /* Match border radius with inputs */
+    cursor: pointer;
+    font-size: 1.1rem; /* Slightly larger button font */
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #2e8b57;
+  }
+
+  .custom-file-upload {
+    display: inline-block;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    text-align: left;
+    width: 100%; /* Agar lebar menyesuaikan */
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    display: block;         /* Label diatur dalam baris baru */
+    margin-bottom: 20px;    /* Jarak antar label */
+}
+
+.custom-file-upload:hover {
+    border-color: #3cb371;
+    background-color: #e8f5e9;
+    color: #3cb371;
+}
+
+input[type="file"] {
+    display: none; /* Sembunyikan elemen input file */
+    margin-bottom: 20px; /* Jarak antar input file */
+}
+
+ 
