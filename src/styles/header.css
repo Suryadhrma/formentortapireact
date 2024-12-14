@@ -80,6 +80,7 @@ body {
     right: -40px; /* Geser ke kanan */
     position: absolute;
     background: none; /* Hapus background default */
+    outline: none;
     border: none; /* Hapus border default */
     cursor: pointer; /* Tambahkan efek pointer */
     padding: 0; /* Hapus padding default */
@@ -94,7 +95,21 @@ body {
     object-fit: contain; /* Pastikan gambar tidak terdistorsi */
 }
 
+/* Menghapus garis fokus (outline) saat tombol diklik atau difokuskan */
+.createads-button:focus-visible, .createads-button:active {
+    outline: none;
+    box-shadow: none; /* Menghilangkan efek bayangan fokus */
+  }
+  
+  /* Untuk memastikan gaya tetap normal setelah tombol dilepas */
+.createads-button:active {
+    transform: scale(0.98); /* Opsional: efek sedikit mengecil saat ditekan */
+    background: #0056b3; /* Opsional: ubah warna saat ditekan */
+  }
+  
+
 .createads-button:hover img {
+    outline: none;
     opacity: 0.8; /* Tambahkan efek hover */
 }
 

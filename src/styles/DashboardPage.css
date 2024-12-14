@@ -52,6 +52,7 @@
     border: none;
     border-radius: 15px;
     background-color: #DCDBDB;
+    color: #000000;
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -59,7 +60,7 @@
   
   .tabs button.active {
     background-color: #27DEBF80;
-    color: #fff;
+    color: #000000;
     font-weight: bold;
   }
   
@@ -67,14 +68,37 @@
     background-color: #e0e0e0;
   }
   
-  /* Classes Container */
+
+
+  /* Class Card */
+.class-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex; /* Flexbox untuk alignment */
+    justify-content: space-between; /* Spasi antara elemen */
+    align-items: center; /* Konten rata tengah */
+}
+
+/* Responsive Grid untuk Container */
+.classes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Flex grid */
+    gap: 20px; /* Jarak antar kartu */
+    padding: 20px; /* Tambahkan padding di container */
+}
+
+/* /* Classes Container 
   .classes-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid 
     gap: 20px;
   }
   
-  /* Class Card */
+  /* Class Card 
   .class-card {
     background: #fff;
     border: 1px solid #ddd;
@@ -82,7 +106,7 @@
     padding: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-  }
+  } */
   
   /* Class Image */
   .class-image {
@@ -108,6 +132,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column !important;
   }
   
   progress {
