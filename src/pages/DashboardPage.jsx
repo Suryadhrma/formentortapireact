@@ -7,10 +7,12 @@ import axios from 'axios';*/
 import React, { useEffect, useState } from 'react';
 import '../styles/DashboardPage.css';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
     const DashboardContent = () => {
     const [classes, setClasses] = useState([]);
     const [activeTab, setActiveTab] = useState('progress'); // Default tab is 'progress'
+    const navigate = useNavigate();
 
     useEffect(() => {
         // Fetch data from API
@@ -28,6 +30,10 @@ import axios from 'axios';
     const filteredClasses = classes.filter((cls) => {
         return activeTab === 'progress' ? cls.progress < 100 : cls.progress === 100;
     });
+
+    const handleCardClick = (id) => {
+        navigate(`/classes/${id}`);
+    };
 
     return (
         <div className="dashboard-content">
@@ -50,7 +56,12 @@ import axios from 'axios';
         </div>
         <div className="classes-container">
             {filteredClasses.map((cls, index) => (
-            <div className="class-card" key={index}>
+            <div className="class-card" key={index}
+                onClick={() => handleCardClick(cls.id)}
+                role="button"
+                tabIndex={0}
+                onKeyPress={(e) => e.key === 'Enter' && handleCardClick(cls.id)}
+            >
                 <img src={cls.image} alt={cls.title} className="class-image" />
                 <h3>{cls.title}</h3>
                 <p>Nama Trainee: {cls.traineeName}</p>

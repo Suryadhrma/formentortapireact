@@ -14,7 +14,19 @@
     padding: 20px;
     font-family: Montserrat;
     color: #000000;
+    -ms-overflow-style: none; /* Hilangkan scrollbar di IE/Edge */
+    scrollbar-width: none; /* Hilangkan scrollbar di Firefox */
   }
+    button {
+    outline: none; /* Menghilangkan garis luar default */
+    box-shadow: none; /* Menghilangkan bayangan pada saat fokus */
+    }
+
+    button:focus {
+        outline: none; /* Menghilangkan outline saat tombol mendapat fokus */
+        box-shadow: none; /* Menghilangkan efek shadow saat fokus */
+    }
+
   
   /* Dashboard Header - Horizontal Layout */
   .dashboard-header {
@@ -29,7 +41,8 @@
   
   /* My Activity */
   .dashboard-header h2 {
-    font-size: 24px;
+    font-size: 34px;
+    font-weight: bold;
     margin: 0; /* Hilangkan margin default */
   }
   
@@ -72,23 +85,37 @@
 
   /* Class Card */
 .class-card {
+    width: 300px;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 16px;
+    padding: 26px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
     text-align: center;
     display: flex; /* Flexbox untuk alignment */
+    flex: 1 0 calc(25% - 26px); /* Lebar card 25% minus jarak antar-card */
+    flex-direction: column;
     justify-content: space-between; /* Spasi antara elemen */
     align-items: center; /* Konten rata tengah */
+    cursor: pointer;
 }
 
 /* Responsive Grid untuk Container */
 .classes-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Flex grid */
-    gap: 20px; /* Jarak antar kartu */
-    padding: 20px; /* Tambahkan padding di container */
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -80px;
+    overflow-x: hidden;
+    gap: 28px; /* Jarak antar kartu */
+    padding: 160px; /* Tambahkan padding di container */
+    -ms-overflow-style: none; /* Hilangkan scrollbar di IE/Edge */
+    scrollbar-width: none; /* Hilangkan scrollbar di Firefox */
+    justify-content: space-evenly; /* Membagi kartu secara merata */
+}
+
+.classes-container::-webkit-scrollbar {
+    display: none; /* Hilangkan scrollbar di Chrome, Safari, dan Opera */
 }
 
 /* /* Classes Container 
@@ -136,8 +163,11 @@
   }
   
   progress {
-    width: 80%;
+    width: 500%;
+    height: 10px;
     appearance: none;
+    border-radius: 10px;
+    overflow: hidden;
   }
   
   progress::-webkit-progress-bar {
@@ -149,4 +179,20 @@
     background-color: #4caf50;
     border-radius: 4px;
   }
+
+  /* Responsive Adjustment */
+    @media (max-width: 768px) {
+    .classes-container {
+        flex-wrap: wrap; /* Agar card berbaris ke bawah di layar kecil */
+        justify-content: center;
+        flex: 0 0 calc(50% - 16px); /* 2 card per baris di layar kecil */
+    }
+      
+    @media (max-width: 480px) {
+        .class-card {
+          flex: 0 0 calc(100% - 16px); /* 1 card per baris di layar sangat kecil */
+        }
+    }
+      
+}
   

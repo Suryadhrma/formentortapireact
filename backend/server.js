@@ -32,13 +32,75 @@ const classes = [
     traineeName: "Alice Johnson",
     progress: 80,
     image: "https://via.placeholder.com/150"
+  },
+
+  {
+    id: 4,
+    title: "Lorem Ipsum",
+    traineeName: "Alice Johnson",
+    progress: 80,
+    image: "https://via.placeholder.com/150"
+  },
+
+  {
+    id: 5,
+    title: "Lorem Ipsum",
+    traineeName: "Alice Johnson",
+    progress: 80,
+    image: "https://via.placeholder.com/150"
+  },
+
+  {
+    id: 6,
+    title: "Lorem Ipsum",
+    traineeName: "Alice Johnson",
+    progress: 80,
+    image: "https://via.placeholder.com/150"
+  },
+
+  {
+    id: 7,
+    title: "Lorem Ipsum",
+    traineeName: "Alice Johnson",
+    progress: 80,
+    image: "https://via.placeholder.com/150"
+  },
+
+  {
+    id: 8,
+    title: "Lorem Ipsum",
+    traineeName: "Alice Johnson",
+    progress: 80,
+    image: "https://via.placeholder.com/150"
+  },
+
+  {
+    id: 9,
+    title: "Lorem Ipsum",
+    traineeName: "Alice Johnson",
+    progress: 50,
+    image: "https://via.placeholder.com/150"
   }
+
 ];
 
 // API endpoint to get classes
 app.get('/api/classes', (req, res) => {
   res.json(classes);
 });
+
+// API endpoint to get class details by ID
+app.get('/api/classes/:id', (req, res) => {
+    const classId = parseInt(req.params.id, 10);
+    const classDetail = classes.find((cls) => cls.id === classId);
+  
+    if (!classDetail) {
+      return res.status(404).json({ error: 'Class not found' });
+    }
+  
+    res.json(classDetail);
+  });
+  
 
 // Start the server
 app.listen(PORT, () => {
