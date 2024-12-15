@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+
+/* DashboardContent.css */
+/*.dashboard-content {
+    padding: 20px;
+    font-family: Montserrat;
+    color: #000000;
+  } */
+  
+/* DashboardContent.css */
+
+/* Dashboard Content */
+.dashboard-content {
+    padding: 20px;
+    font-family: Montserrat;
+    color: #000000;
+    -ms-overflow-style: none; /* Hilangkan scrollbar di IE/Edge */
+    scrollbar-width: none; /* Hilangkan scrollbar di Firefox */
+  }
+    button {
+    outline: none; /* Menghilangkan garis luar default */
+    box-shadow: none; /* Menghilangkan bayangan pada saat fokus */
+    }
+
+    button:focus {
+        outline: none; /* Menghilangkan outline saat tombol mendapat fokus */
+        box-shadow: none; /* Menghilangkan efek shadow saat fokus */
+    }
+
+  
+  /* Dashboard Header - Horizontal Layout */
+  .dashboard-header {
+    position: absolute;
+    top: 80px;
+    display: flex; /* Flexbox untuk horizontal layout */
+    align-items: center; /* Vertikal rata tengah */
+    justify-content: space-between; /* My Activity di kiri, tab di kanan */
+    margin-bottom: 20px;
+    padding: 0 10px; /* Tambahkan padding untuk jarak */
+  }
+  
+  /* My Activity */
+  .dashboard-header h2 {
+    font-size: 34px;
+    font-weight: bold;
+    margin: 0; /* Hilangkan margin default */
+  }
+  
+  /* Tabs Container */
+  .tabs {
+    position: absolute;
+    top: 40px;
+    width: 50px;
+    height: auto;
+    left: 1050px;
+    display: flex; /* Tabs horizontal */
+    gap: 10px; /* Jarak antar tombol tab */
+    color: #000000;
+    
+  }
+  
+  .tabs button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    background-color: #DCDBDB;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tabs button.active {
+    background-color: #27DEBF80;
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  .tabs button:hover {
+    background-color: #e0e0e0;
+  }
+  
+
+
+  /* Class Card */
+.class-card {
+    width: 300px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 26px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    text-align: center;
+    display: flex; /* Flexbox untuk alignment */
+    flex: 1 0 calc(25% - 26px); /* Lebar card 25% minus jarak antar-card */
+    flex-direction: column;
+    justify-content: space-between; /* Spasi antara elemen */
+    align-items: center; /* Konten rata tengah */
+    cursor: pointer;
+}
+
+/* Responsive Grid untuk Container */
+.classes-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -80px;
+    overflow-x: hidden;
+    gap: 28px; /* Jarak antar kartu */
+    padding: 160px; /* Tambahkan padding di container */
+    -ms-overflow-style: none; /* Hilangkan scrollbar di IE/Edge */
+    scrollbar-width: none; /* Hilangkan scrollbar di Firefox */
+    justify-content: space-evenly; /* Membagi kartu secara merata */
+}
+
+.classes-container::-webkit-scrollbar {
+    display: none; /* Hilangkan scrollbar di Chrome, Safari, dan Opera */
+}
+
+/* /* Classes Container 
+  .classes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid 
+    gap: 20px;
+  }
+  
+  /* Class Card 
+  .class-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  } */
+  
+  /* Class Image */
+  .class-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  /* Title and Trainee Info */
+  h2{
+    font-size: 28px;
+    margin: 12px 0;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin: 12px 0;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #000000;
+  
+  }
+  
+.pojokkananbwh{
+    position: absolute;
+
+}
+
+h4{
+    font-size: 14px;
+    color: #000000;
+}
+
+h5{
+    font-size: 14px;
+    color: #000000;
+}
+
+  /* Responsive Adjustment */
+    @media (max-width: 768px) {
+    .classes-container {
+        flex-wrap: wrap; /* Agar card berbaris ke bawah di layar kecil */
+        justify-content: center;
+        flex: 0 0 calc(50% - 16px); /* 2 card per baris di layar kecil */
+    }
+      
+    @media (max-width: 480px) {
+        .class-card {
+          flex: 0 0 calc(100% - 16px); /* 1 card per baris di layar sangat kecil */
+        }
+    }
+
+      /* Class Card */
+    .class-detail-card {
+        width: 300px !important;
+        background: #fff !important;
+        border: 1px solid #ddd !important;
+        border-radius: 8px !important;
+        padding: 26px !important;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+        display: flex !important; /* Flexbox untuk alignment */
+        flex: 1 0 calc(25% - 26px) !important; /* Lebar card 25% minus jarak antar-card */
+        flex-direction: column !important;
+        justify-content: space-between !important; /* Spasi antara elemen */
+        align-items: center !important; /* Konten rata tengah */
+        cursor: pointer !important;
+    }
+
+    /* Responsive Grid untuk Container */
+    .classes-detail-container {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        margin-left: -80px !important;
+        overflow-x: hidden !important;
+        gap: 28px !important; /* Jarak antar kartu */
+        padding: 160px !important; /* Tambahkan padding di container */
+        -ms-overflow-style: none !important; /* Hilangkan scrollbar di IE/Edge */
+        scrollbar-width: none !important; /* Hilangkan scrollbar di Firefox */
+        justify-content: space-evenly !important; /* Membagi kartu secara merata */
+    }
+
+    .class-detail-card:hover {
+        transform: translateY(-5px) !important; /* Efek hover mengangkat card sedikit */
+    }
+    
+    .class-detail-card-left h3 {
+        margin: 0 !important; /* Menghilangkan margin default pada h3 */
+        font-size: 18px !important;
+        color: #000000 !important;
+    }
+    
+    .class-detail-card-icon {
+        display: flex !important;
+        align-items: center  !important;
+        gap: 8px  !important;
+        color: #f44336; /* Warna merah untuk status */
+    }
+    
+    .class-detail-card-right button {
+        background-color: #4caf50  !important; /* Warna hijau untuk tombol */
+        color: #fff  !important;
+        border: none  !important;
+        padding: 8px 16px !important;
+        border-radius: 4px !important;
+        cursor: pointer !important;
+        font-size: 14px !important;
+    }
+    
+    .class-detail-card-right button:hover {
+        background-color: #45a049 !important; /* Warna hijau lebih gelap saat hover */
+    }
+}

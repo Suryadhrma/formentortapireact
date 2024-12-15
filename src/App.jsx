@@ -68,18 +68,21 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Sidebar from './components/sidebar';
+import Header2 from './components/HeaderforMycourse';
 
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
 import ClassDetailPage from './pages/ClassDetailPage'; 
 import ActivityPage from './pages/ActivityPage'; 
+import MyCoursePage from './pages/MyCoursePage'; 
 
 import './styles/header.css';
 import './styles/LoginPage.css';
 import './styles/RegisterPage.css';
 import './styles/DashboardPage.css';
 import './styles/ActivityPage.css';
+import './styles/MyCoursePage.css';
 
 const App = () => {
     const [isSidebarActive, setSidebarActive] = useState(false);
