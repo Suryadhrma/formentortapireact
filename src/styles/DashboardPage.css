@@ -143,14 +143,24 @@
   }
   
   /* Title and Trainee Info */
+  h2{
+    font-size: 28px;
+    margin: 12px 0;
+    font-weight: bold;
+    color: #000000;
+  }
+
   h3 {
     font-size: 18px;
     margin: 12px 0;
+    font-weight: bold;
+    color: #000000;
   }
   
   p {
     font-size: 14px;
-    color: #555;
+    color: #000000;
+  
   }
   
   /* Progress Bar */
@@ -193,6 +203,66 @@
           flex: 0 0 calc(100% - 16px); /* 1 card per baris di layar sangat kecil */
         }
     }
-      
+
+      /* Class Card */
+    .class-detail-card {
+        width: 300px !important;
+        background: #fff !important;
+        border: 1px solid #ddd !important;
+        border-radius: 8px !important;
+        padding: 26px !important;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+        display: flex !important; /* Flexbox untuk alignment */
+        flex: 1 0 calc(25% - 26px) !important; /* Lebar card 25% minus jarak antar-card */
+        flex-direction: column !important;
+        justify-content: space-between !important; /* Spasi antara elemen */
+        align-items: center !important; /* Konten rata tengah */
+        cursor: pointer !important;
+    }
+
+    /* Responsive Grid untuk Container */
+    .classes-detail-container {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        margin-left: -80px !important;
+        overflow-x: hidden !important;
+        gap: 28px !important; /* Jarak antar kartu */
+        padding: 160px !important; /* Tambahkan padding di container */
+        -ms-overflow-style: none !important; /* Hilangkan scrollbar di IE/Edge */
+        scrollbar-width: none !important; /* Hilangkan scrollbar di Firefox */
+        justify-content: space-evenly !important; /* Membagi kartu secara merata */
+    }
+
+    .class-detail-card:hover {
+        transform: translateY(-5px) !important; /* Efek hover mengangkat card sedikit */
+    }
+    
+    .class-detail-card-left h3 {
+        margin: 0 !important; /* Menghilangkan margin default pada h3 */
+        font-size: 18px !important;
+        color: #000000 !important;
+    }
+    
+    .class-detail-card-icon {
+        display: flex !important;
+        align-items: center  !important;
+        gap: 8px  !important;
+        color: #f44336; /* Warna merah untuk status */
+    }
+    
+    .class-detail-card-right button {
+        background-color: #4caf50  !important; /* Warna hijau untuk tombol */
+        color: #fff  !important;
+        border: none  !important;
+        padding: 8px 16px !important;
+        border-radius: 4px !important;
+        cursor: pointer !important;
+        font-size: 14px !important;
+    }
+    
+    .class-detail-card-right button:hover {
+        background-color: #45a049 !important; /* Warna hijau lebih gelap saat hover */
+    }
 }
-  

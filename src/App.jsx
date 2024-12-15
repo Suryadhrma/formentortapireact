@@ -64,7 +64,6 @@ const App = () => {
 export default App; */
 
 
-
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -73,19 +72,21 @@ import Sidebar from './components/sidebar';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
-import ClassDetailPage from './pages/ClassDetailPage'; // Halaman detail kelas
+import ClassDetailPage from './pages/ClassDetailPage'; 
+import ActivityPage from './pages/ActivityPage'; 
 
 import './styles/header.css';
 import './styles/LoginPage.css';
 import './styles/RegisterPage.css';
 import './styles/DashboardPage.css';
+import './styles/ActivityPage.css';
 
 const App = () => {
     const [isSidebarActive, setSidebarActive] = useState(false);
 
     const toggleSidebar = () => {
         setSidebarActive(!isSidebarActive);
-    };
+    }; 
 
     return (
         <Router>
@@ -108,6 +109,10 @@ const App = () => {
 
                         {/* Rute untuk halaman Detail Kelas */}
                         <Route path="/classes/:id" element={<ClassDetailPage />} />
+
+                        {/* Rute untuk halaman Pengisian Activity */}
+                        <Route path="/isiact" element={<ActivityPage />} />
+
                     </Routes>
                 </div>
             </div>
@@ -116,3 +121,5 @@ const App = () => {
 };
 
 export default App;
+
+
