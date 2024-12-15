@@ -1,0 +1,219 @@
+
+.add-project-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.add-project-container h2 {
+    position: absolute;
+    top: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    position: relative;
+    left: 20px;
+    top: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  color: black;
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group textarea,
+.form-group input {
+  width: 200%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: black;
+}
+
+.custom-textarea {
+    height: 150px; /* Tinggi textarea */
+    resize: vertical; /* Izinkan pengguna memperbesar ukuran hanya secara vertikal */
+  }  
+
+
+
+.form-group .cancel-button,
+.form-group .submit-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-group .cancel-button {
+  background-color: #504848;
+  margin-right: 10px;
+}
+
+.form-group .submit-button {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.input-with-icon {
+    position: relative; /* Membuat wrapper sebagai parent positioning */
+  }
+  
+  .input-with-icon input {
+    width: 200%;
+    padding: 10px;
+    padding-left: 35px !important; /* Tambahkan padding jika ikon di sisi kiri */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .input-with-icon .input-icon {
+    position: absolute;
+    top: 50%; /* Posisikan ikon di tengah secara vertikal */
+    transform: translateY(-50%);
+    right: 10px; /* Geser ke dalam, dekat sisi kanan input */
+    width: 20px; /* Ukuran ikon */
+    height: 20px;
+    pointer-events: none; /* Ikon tidak mengganggu input (klik/tap tetap fokus ke input) */
+  }
+  
+  /* Jika ikon berada di kiri input */
+  .input-with-icon .input-icon-left {
+    left: 10px;
+    right: unset;
+  }
+
+  .input-with-icon input::placeholder {
+    padding-left: 30px; /* Geser teks placeholder ke kanan */
+    color: #999; /* (Opsional) Ubah warna placeholder */
+  }
+  
+  .custom-file-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .file-label {
+    display: flex;
+    width: 1120px;
+    align-items: center;
+    justify-content: flex-start; /* Teks dan gambar rata ke kiri */
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px !important;
+    transition: background-color 0.3s;
+    padding-top: 1px;
+    padding-bottom: 2px; /* Sesuaikan nilainya */
+  }
+
+  .file-label span {
+    position: relative;
+    top: -10px !important; /* Naikkan teks secara spesifik */
+    left: 5px;
+  }
+  
+  .file-label:hover {
+    background-color: #ffffff;
+  }
+  
+  .file-icon {
+    margin-top: 10px;
+    margin-left: -15px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  
+  .file-input {
+    display: none; /* Sembunyikan input file asli */
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+  }
+
+  .navigate-button {
+    width: 200%;
+    background-color: #ffffff; /* Warna biru */
+    color: rgb(0, 0, 0);
+    border: 1px solid #ccc;
+    text-align: left;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Jarak dengan elemen sebelumnya */
+  }
+  
+  .navigate-button:hover {
+    background-color: #ffffff; /* Warna biru lebih gelap saat hover */
+  }
+
+  .cancel-button{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Tambahkan ini */
+    margin-top: 20px;
+    top: -10px;
+    right: -460px;
+    width: 15%;
+    padding: 10px;
+    gap: 5px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.submit-button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Tambahkan ini */
+    margin-top: 20px;
+    top: -10px;
+    right: -560px;
+    width: 15%;
+    padding: 10px;
+    gap: 5px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.cancel-button {
+    background-color: #af9d9d !important;
+    color: #000000;
+    border: 1px solid #ccc;
+}
+
+.submit-button {
+    background-color: #00C896;
+    color: #000000 !important;
+}
+
+.cancel-button:hover {
+    background-color: #f5f5f5;
+}
+
+.submit-button:hover {
+    background-color: #00b586;
+}

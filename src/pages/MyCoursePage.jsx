@@ -9,51 +9,35 @@ import '../styles/MyCoursePage.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-    const DashboardContent = () => {
-    const [classes, setClasses] = useState([]);
-    const navigate = useNavigate();
+    const MyCoursePage = () => {  
+        const [courses, setCourses] = useState([]);
 
-    useEffect(() => {
-        // Fetch data from API
-        axios
-        .get('http://localhost:5000/api/classes') // Ganti URL dengan API endpoint-mu
-        .then((response) => {
-            setClasses(response.data);
-        })
-        .catch((error) => {
-            console.error('Error fetching data:', error);
-        });
-    }, []);
-
-    const handleCardClick = (id) => {
-        navigate(`/classes/${id}`);
-    };
-
-    return (
-        <div className="dashboard-content">
-        <div className="dashboard-header">
-            <h2>My Course</h2>
-        </div>
-        <div className="classes-container">
-            {filteredClasses.map((cls, index) => (
-            <div className="class-card" key={index}
-                onClick={() => handleCardClick(cls.id)}
-                role="button"
-                tabIndex={0}
-                onKeyPress={(e) => e.key === 'Enter' && handleCardClick(cls.id)}
-            >
-                <img src={cls.image} alt={cls.title} className="class-image" />
-                <h3>{cls.title}</h3>
-                <p>{cls.desc}</p>
-                <div className="pojokkananbwh">
-                    <h4>{totalTrainee} Students</h4>
-                    <h5>{stars}</h5>
+        useEffect(() => {
+          // Fetch data from backend
+          fetch('http://localhost:5000/api/courses')
+            .then((response) => response.json())
+            .then((data) => setCourses(data))
+            .catch((error) => console.error('Error fetching data:', error));
+        }, []);
+      
+        return (
+          <div className="app-container">
+            <h1 className="title">My Course</h1>
+            <div className="course-container">
+              {courses.map((course) => (
+                <div key={course.id} className="course-card">
+                  <img src={course.imageUrl} alt={course.title} className="course-image" />
+                  <h2 className="course-title">{course.title}</h2>
+                  <p className="course-description">{course.description}</p>
+                  <div className="course-stats">
+                    <p>👥 {course.students} Students</p>
+                    <p>⭐ {course.rating} ({course.reviews} Reviews)</p>
+                  </div>
                 </div>
+              ))}
             </div>
-            ))}
-        </div>
-        </div>
-    );
-    };
+          </div>
+        );
+      }
 
-    export default DashboardContent;
+    export default MyCoursePage;
