@@ -84,6 +84,7 @@ import './styles/RegisterPage.css';
 import './styles/DashboardPage.css';
 import './styles/ActivityPage.css';
 import './styles/MyCoursePage.css';
+import ValidationMentor from './pages/admin/ValidationMentor';
 
 
 const App = () => {
@@ -117,10 +118,13 @@ const App = () => {
 
                         {/* Rute untuk halaman Pengisian Activity */}
                         <Route path="/isiact" element={<ActivityPage />} />
+                    
 
-                        {/* Rute untuk halaman Dashboard Admin */}
-                        <Route path="/admin/dashboard" element={<DashboardAdmin />} />
+                      {/* Rute untuk halaman Dashboard Admin */}
+                      <Route path="/admin/dashboard" element={<DashboardAdmin />} />
 
+                      {/* Rute untuk halaman Validasi Mentor */}
+                      <Route path="/admin/validation-mentor" element={<ValidationMentor />} />
                     </Routes>
                 </div>
             </div>
