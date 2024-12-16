@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+}
+
+.add-project-container {
+  max-width: 10000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+form {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0px !important;
+}
+
+label {
+  font-weight: 700; /* Bold untuk judul label */
+  font-size: 18px;
+  color: #000;
+}
+
+.custom-textarea-judul {
+  width: 1200px !important;
+  height: 50px; /* Ukuran tinggi input */
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  resize: none; /* Disable resize */
+}
+
+.custom-textarea-judul::placeholder {
+  color: #b0b0b0; /* Warna placeholder */
+}
+
+.custom-textarea {
+  width: 1200px !important;
+  height: 160px; /* Ukuran tinggi input */
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  resize: none; /* Disable resize */
+}
+
+.custom-textarea::placeholder {
+  color: #b0b0b0; /* Warna placeholder */
+}
+
+.custom-textarea-tugas {
+  width: 1200px !important;
+  height: 70px; /* Ukuran tinggi input */
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  resize: none; /* Disable resize */
+}
+
+.custom-textarea-tugas::placeholder {
+  color: #b0b0b0; /* Warna placeholder */
+}
+
+.rincian-kegiatan,
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.attachment-button {
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #808080;
+  cursor: pointer;
+}
+
+.isi-silabus-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.isi-silabus-buttons button {
+  position: relative;
+  top: 40px;
+  left: 470px;
+  width: 150px;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+
+.isi-silabus-buttons button:first-child {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+.isi-silabus-buttons button:last-child {
+  background-color: #21e6b6; /* Warna tombol hijau */
+  color: #fff;
+  font-weight: bold;
+  border: none;
+}
+
+.isi-silabus-buttons button:hover {
+  opacity: 0.8;
+}

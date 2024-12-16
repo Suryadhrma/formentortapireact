@@ -1,0 +1,81 @@
+.materi-pembelajaran-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.meeting-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.meeting-card {
+    display: flex;
+    width: 1150px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f8fefc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.meeting-card-content h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.isi-silabus-btn {
+    background-color: #28d6aa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.isi-silabus-btn:hover {
+    background-color: #24c09c;
+}
+
+.meeting-card-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-icon {
+    font-size: 20px;
+}
+
+.status-text {
+    color: #e74c3c;
+    font-size: 14px;
+}
+
+.tambah-pertemuan-btn {
+    position: relative;
+    left: 1050px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffffff00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.tambah-pertemuan-btn img{
+    width: 150px;
+    height: auto;
+}
+
+.tambah-pertemuan-btn:hover {
+    background-color: #ffffff00;
+}

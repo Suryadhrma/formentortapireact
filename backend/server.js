@@ -152,6 +152,14 @@ const courses = [
     // Tambahkan 6 data dummy dengan format yang sama
   ];
 
+    // Routes
+    const meetingRoutes = require("./routes/meetings");
+    app.use('/api/meetings', meetingRoutes);
+
+    const syllabusRoutes = require("./routes/syllabus");
+    app.use("/api/syllabus", syllabusRoutes);
+
+
     // API endpoint to get classes
     app.get('/api/classes', (req, res) => {
     res.json(classes);

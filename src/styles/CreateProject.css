@@ -1,15 +1,16 @@
 
 .add-project-container {
-  max-width: 600px;
+  max-width: 600px ;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px !important;
+  padding-top: -40px !important;
   border-radius: 8px;
   background-color: #fff;
 }
 
 .add-project-container h2 {
     position: absolute;
-    top: 50px;
+    top: 30px;
     text-align: center;
     margin-bottom: 20px;
 }
