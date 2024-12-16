@@ -1,8 +1,8 @@
 // ValidationMentor.js
 import React, { useState, useEffect } from 'react';
-import Button from '../../components/admin/Button';
-import Reject from '../../components/admin/Reject';
-import Accept from '../../components/admin/Accept';
+import Button from '../../../components/admin/Button';
+import Reject from '../../../components/admin/Reject';
+import Accept from '../../../components/admin/Accept';
 import { useNavigate } from 'react-router-dom';
 
 const ValidationMentor = () => {

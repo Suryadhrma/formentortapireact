@@ -77,6 +77,7 @@ import ClassDetailPage from './pages/ClassDetailPage';
 import ActivityPage from './pages/ActivityPage'; 
 import MyCoursePage from './pages/MyCoursePage'; 
 import DashboardAdmin from './pages/admin/dashboard/DashboardAdmin';
+import ValidationMentor from './pages/admin/dashboard/ValidationMentor';
 
 import './styles/header.css';
 import './styles/LoginPage.css';
@@ -84,7 +85,6 @@ import './styles/RegisterPage.css';
 import './styles/DashboardPage.css';
 import './styles/ActivityPage.css';
 import './styles/MyCoursePage.css';
-import ValidationMentor from './pages/admin/ValidationMentor';
 
 
 const App = () => {
